@@ -13,10 +13,34 @@ var locationOne = {
 		this.hourlyCookiesSales[i] = Math.floor(randomCust * this.aveCookieSale);
 		this.total += this.hourlyCookiesSales[i];
 		
-		// document.write(this.hourlyCookiesSales[i] + "\n");
 	  }
-	  //document.write(this.total + "\n");
 	  
+	  var nameLocation = document.createElement("h1");  //create element
+	  var newText = document.createTextNode(this.name);  //give it content
+	  nameLocation.appendChild(newText);
+	  document.getElementById("localName").appendChild(nameLocation);
+	  	  
+	  for (var i = 0; i < 8; i++) {	  
+		var nameLocation = document.createElement("li");  //create element
+		if (i<3){
+		var newText = document.createTextNode( (i+10)+ " am: " + this.hourlyCookiesSales[i]);  //give it content
+		nameLocation.appendChild(newText);
+		document.getElementById("listAve").appendChild(nameLocation);
+		}  
+		else {
+		var newText = document.createTextNode( (i+10- 12)+ " pm: " + this.hourlyCookiesSales[i]);  //give it content
+		nameLocation.appendChild(newText);
+		document.getElementById("listAve").appendChild(nameLocation);
+		}
+	  }
+	
+	  nameLocation = document.createElement("li");  //create element
+	  newText = document.createTextNode("total: " + this.total);  //give it content
+		nameLocation.appendChild(newText);
+		document.getElementById("listAve").appendChild(nameLocation);
+	  
+	  
+	  /*
 	  var name = document.getElementById("name");
 	  name.innerHTML = locationOne.name;
 	  
@@ -46,11 +70,13 @@ var locationOne = {
 	  
 	  var totalSales = document.getElementById("total");
 	  totalSales.innerHTML = "Total: " + this.total;
+	  */
     }
 };
 
 locationOne.randomGen();
 
+/*
 var locationTwo = {
 	name: "Portland Airport",
 	minCustomer: 6,
@@ -263,6 +289,6 @@ var locationFive = {
 
 locationFive.randomGen();
 
-
+*/
 
 
