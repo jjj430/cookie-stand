@@ -15,7 +15,7 @@ var locationOne = {
 		
 	  }
 	  
-	  var nameLocation = document.createElement("h1");  //create element
+	  var nameLocation = document.createElement("h3");  //create element
 	  var newText = document.createTextNode(this.name);  //give it content
 	  nameLocation.appendChild(newText);
 	  document.getElementById("localName").appendChild(nameLocation);
@@ -38,45 +38,12 @@ var locationOne = {
 	  newText = document.createTextNode("total: " + this.total);  //give it content
 		nameLocation.appendChild(newText);
 		document.getElementById("listAve").appendChild(nameLocation);
-	  
-	  
-	  /*
-	  var name = document.getElementById("name");
-	  name.innerHTML = locationOne.name;
-	  
-	  var tenAm = document.getElementById("10am");
-	  tenAm.innerHTML = "10am: " + this.hourlyCookiesSales[0];
-	  
-	  var elevanAm = document.getElementById("11am");
-	  elevanAm.innerHTML = "11am: " + this.hourlyCookiesSales[1];
-	  
-	  var twelvePm = document.getElementById("12pm");
-	  twelvePm.innerHTML = "12pm: " + this.hourlyCookiesSales[2];
-	  
-	  var onePm = document.getElementById("1pm");
-	  onePm.innerHTML =  "1pm: " + this.hourlyCookiesSales[3];
-	  
-	  var twoPm = document.getElementById("2pm");
-	  twoPm.innerHTML =  "2pm: " + this.hourlyCookiesSales[4];
-	  
-	  var threePm = document.getElementById("3pm");
-	  threePm.innerHTML = "3pm: " + this.hourlyCookiesSales[5];
-	  
-	  var fourPm = document.getElementById("4pm");
-	  fourPm.innerHTML = "4pm: " + this.hourlyCookiesSales[6];
-	  
-	  var fivePm = document.getElementById("5pm");
-	  fivePm.innerHTML = "5pm: " + this.hourlyCookiesSales[7];
-	  
-	  var totalSales = document.getElementById("total");
-	  totalSales.innerHTML = "Total: " + this.total;
-	  */
     }
 };
 
 locationOne.randomGen();
 
-/*
+
 var locationTwo = {
 	name: "Portland Airport",
 	minCustomer: 6,
@@ -96,40 +63,35 @@ var locationTwo = {
 	  }
 	  // document.write(this.total + "\n");
 	  
-	  var name = document.getElementById("name1");
-	  name.innerHTML = locationTwo.name;
-	  
-	  var tenAm = document.getElementById("10am1");
-	  tenAm.innerHTML = "10am: " + this.hourlyCookiesSales[0];
-	  
-	  var elevanAm = document.getElementById("11am1");
-	  elevanAm.innerHTML = "11am: " + this.hourlyCookiesSales[1];
-	  
-	  var twelvePm = document.getElementById("12pm1");
-	  twelvePm.innerHTML = "12pm: " + this.hourlyCookiesSales[2];
-	  
-	  var onePm = document.getElementById("1pm1");
-	  onePm.innerHTML =  "1pm: " + this.hourlyCookiesSales[3];
-	  
-	  var twoPm = document.getElementById("2pm1");
-	  twoPm.innerHTML =  "2pm: " + this.hourlyCookiesSales[4];
-	  
-	  var threePm = document.getElementById("3pm1");
-	  threePm.innerHTML = "3pm: " + this.hourlyCookiesSales[5];
-	  
-	  var fourPm = document.getElementById("4pm1");
-	  fourPm.innerHTML = "4pm: " + this.hourlyCookiesSales[6];
-	  
-	  var fivePm = document.getElementById("5pm1");
-	  fivePm.innerHTML = "5pm: " + this.hourlyCookiesSales[7];
-	  
-	  var totalSales = document.getElementById("total1");
-	  totalSales.innerHTML = "Total: " + this.total;
+	  var nameLocation2 = document.createElement("h3");  //create element
+	  var newText = document.createTextNode(this.name);  //give it content
+	  nameLocation2.appendChild(newText);
+	  document.getElementById("localName2").appendChild(nameLocation2);
+	  	  
+	  for (var i = 0; i < 8; i++) {	  
+		var nameLocation2 = document.createElement("li");  //create element
+		if (i<3){
+		var newText = document.createTextNode( (i+10)+ " am: " + this.hourlyCookiesSales[i]);  //give it content
+		nameLocation2.appendChild(newText);
+		document.getElementById("listAve2").appendChild(nameLocation2);
+		}  
+		else {
+		var newText = document.createTextNode( (i+10- 12)+ " pm: " + this.hourlyCookiesSales[i]);  //give it content
+		nameLocation2.appendChild(newText);
+		document.getElementById("listAve2").appendChild(nameLocation2);
+		}
+	  }
+	
+	  nameLocation2 = document.createElement("li");  //create element
+	  newText = document.createTextNode("total: " + this.total);  //give it content
+		nameLocation2.appendChild(newText);
+		document.getElementById("listAve2").appendChild(nameLocation2);
     }
+
 };
 
 locationTwo.randomGen();
-
+/*
 var locationThree = {
 	name: "Washington Square",
 	minCustomer: 11,
