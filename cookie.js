@@ -137,7 +137,7 @@ var locationThree = {
 
 locationThree.randomGen();
 
-/*
+
 var locationFour = {
 	name: "Sellwood",
 	minCustomer: 20,
@@ -152,45 +152,36 @@ var locationFour = {
 			+ this.minCustomer;
 		this.hourlyCookiesSales[i] = Math.floor(randomCust * this.aveCookieSale);
 		this.total += this.hourlyCookiesSales[i];
-		
-		// document.write(this.hourlyCookiesSales[i] + "\n");
 	  }
-	  // document.write(this.total + "\n");
-	  
-	  var name = document.getElementById("name3");
-	  name.innerHTML = locationFour.name;
-	  
-	  var tenAm = document.getElementById("10am3");
-	  tenAm.innerHTML = "10am: " + this.hourlyCookiesSales[0];
-	  
-	  var elevanAm = document.getElementById("11am3");
-	  elevanAm.innerHTML = "11am: " + this.hourlyCookiesSales[1];
-	  
-	  var twelvePm = document.getElementById("12pm3");
-	  twelvePm.innerHTML = "12pm: " + this.hourlyCookiesSales[2];
-	  
-	  var onePm = document.getElementById("1pm3");
-	  onePm.innerHTML =  "1pm: " + this.hourlyCookiesSales[3];
-	  
-	  var twoPm = document.getElementById("2pm3");
-	  twoPm.innerHTML =  "2pm: " + this.hourlyCookiesSales[4];
-	  
-	  var threePm = document.getElementById("3pm3");
-	  threePm.innerHTML = "3pm: " + this.hourlyCookiesSales[5];
-	  
-	  var fourPm = document.getElementById("4pm3");
-	  fourPm.innerHTML = "4pm: " + this.hourlyCookiesSales[6];
-	  
-	  var fivePm = document.getElementById("5pm3");
-	  fivePm.innerHTML = "5pm: " + this.hourlyCookiesSales[7];
-	  
-	  var totalSales = document.getElementById("total3");
-	  totalSales.innerHTML = "Total: " + this.total;
+	 
+	var nameLocation4 = document.createElement("h3");  //create element
+	var newText = document.createTextNode(this.name);  //give it content
+	nameLocation4.appendChild(newText);
+	document.getElementById("localName4").appendChild(nameLocation4);
+	  	  
+	for (var i = 0; i < 8; i++) {	  
+		var nameLocation4 = document.createElement("li");  //create element
+		if (i<3){
+		var newText = document.createTextNode( (i+10)+ " am: " + this.hourlyCookiesSales[i]);  //give it content
+		nameLocation4.appendChild(newText);
+		document.getElementById("listAve4").appendChild(nameLocation4);
+		}  
+		else {
+		var newText = document.createTextNode( (i+10- 12)+ " pm: " + this.hourlyCookiesSales[i]);  //give it content
+		nameLocation4.appendChild(newText);
+		document.getElementById("listAve4").appendChild(nameLocation4);
+		}
+	  }
+	
+	  nameLocation4 = document.createElement("li");  //create element
+	  newText = document.createTextNode("total: " + this.total);  //give it content
+		nameLocation4.appendChild(newText);
+		document.getElementById("listAve4").appendChild(nameLocation4);
     }
 };
 
 locationFour.randomGen();
-
+/*
 var locationFive = {
 	name: "Pearl District",
 	minCustomer: 3,
