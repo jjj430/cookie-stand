@@ -181,7 +181,7 @@ var locationFour = {
 };
 
 locationFour.randomGen();
-/*
+
 var locationFive = {
 	name: "Pearl District",
 	minCustomer: 3,
@@ -196,45 +196,36 @@ var locationFive = {
 			+ this.minCustomer;
 		this.hourlyCookiesSales[i] = Math.floor(randomCust * this.aveCookieSale);
 		this.total += this.hourlyCookiesSales[i];
-		
-		// document.write(this.hourlyCookiesSales[i] + "\n");
 	  }
-	  // document.write(this.total + "\n");
-	  
-	  var name = document.getElementById("name4");
-	  name.innerHTML = locationFive.name;
-	  
-	  var tenAm = document.getElementById("10am4");
-	  tenAm.innerHTML = "10am: " + this.hourlyCookiesSales[0];
-	  
-	  var elevanAm = document.getElementById("11am4");
-	  elevanAm.innerHTML = "11am: " + this.hourlyCookiesSales[1];
-	  
-	  var twelvePm = document.getElementById("12pm4");
-	  twelvePm.innerHTML = "12pm: " + this.hourlyCookiesSales[2];
-	  
-	  var onePm = document.getElementById("1pm4");
-	  onePm.innerHTML =  "1pm: " + this.hourlyCookiesSales[3];
-	  
-	  var twoPm = document.getElementById("2pm4");
-	  twoPm.innerHTML =  "2pm: " + this.hourlyCookiesSales[4];
-	  
-	  var threePm = document.getElementById("3pm4");
-	  threePm.innerHTML = "3pm: " + this.hourlyCookiesSales[5];
-	  
-	  var fourPm = document.getElementById("4pm4");
-	  fourPm.innerHTML = "4pm: " + this.hourlyCookiesSales[6];
-	  
-	  var fivePm = document.getElementById("5pm4");
-	  fivePm.innerHTML = "5pm: " + this.hourlyCookiesSales[7];
-	  
-	  var totalSales = document.getElementById("total4");
-	  totalSales.innerHTML = "Total: " + this.total;
+	
+	var nameLocation5 = document.createElement("h3");  //create element
+	  var newText = document.createTextNode(this.name);  //give it content
+	  nameLocation5.appendChild(newText);
+	  document.getElementById("localName5").appendChild(nameLocation5);
+	  	  
+	  for (var i = 0; i < 8; i++) {	  
+		var nameLocation5 = document.createElement("li");  //create element
+		if (i<3){
+		var newText = document.createTextNode( (i+10)+ " am: " + this.hourlyCookiesSales[i]);  //give it content
+		nameLocation5.appendChild(newText);
+		document.getElementById("listAve5").appendChild(nameLocation5);
+		}  
+		else {
+		var newText = document.createTextNode( (i+10- 12)+ " pm: " + this.hourlyCookiesSales[i]);  //give it content
+		nameLocation5.appendChild(newText);
+		document.getElementById("listAve5").appendChild(nameLocation5);
+		}
+	  }
+	
+	  nameLocation5 = document.createElement("li");  //create element
+	  newText = document.createTextNode("total: " + this.total);  //give it content
+		nameLocation5.appendChild(newText);
+		document.getElementById("listAve5").appendChild(nameLocation5);
     }
 };
 
 locationFive.randomGen();
 
-*/
+
 
 
