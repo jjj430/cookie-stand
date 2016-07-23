@@ -1,0 +1,10 @@
+header h3 {
+	display: inline-block;
+	font-size: 32px;
+	vertical-align: middle;
+}
+header img {
+	vertical-align: middle;
+	height: 100px;
+	width: 200px;
+}
