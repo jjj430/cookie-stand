@@ -42,12 +42,55 @@ function location(name, min, max, ave){
 }
 
 var stores = [
-	new location("portland", 17, 88, 5.2),
-	new location("pdxAirport", 6, 24, 1.2),
-	new location("washingtonSq", 11, 38, 1.9),
-	new location("sellwood", 20, 48, 3.3),
-	new location("pearlDist", 3, 24, 2.6)
+	new location("Portland", 17, 88, 5.2),
+	new location("Portland Airport", 6, 24, 1.2),
+	new location("Washington Sqare", 11, 38, 1.9),
+	new location("Sellwood", 20, 48, 3.3),
+	new location("Pearl Distict", 3, 24, 2.6)
 ];
+
+// add table header Salmon Cookie Sales
+var table = document.getElementById("locations");
+var tableHeader = document.createElement("tr");
+var tableHeaderCell = document.createElement("th");
+tableHeaderCell.setAttribute("colspan", "5");
+tableHeaderCell.innerText = "Salmon Cookie Sales";
+tableHeader.appendChild(tableHeaderCell);
+table.appendChild(tableHeader);
+
+
+
+// Add Column Headers
+tableHeader = document.createElement("tr");
+tableHeaderCell = document.createElement("th");
+tableHeaderCell.innerText = "Location";
+tableHeader.appendChild(tableHeaderCell);
+
+for (i=0; i < 8; i++){
+	if(i < 2){
+		tableHeaderCell = document.createElement("th");
+		tableHeaderCell.innerText = i+10 + " am";
+		tableHeader.appendChild(tableHeaderCell);
+	}
+	else if (i==2){
+		tableHeaderCell = document.createElement("th");
+		tableHeaderCell.innerText = i+10 + " pm";
+		tableHeader.appendChild(tableHeaderCell);
+	}
+	
+	else {
+		tableHeaderCell = document.createElement("th");
+		tableHeaderCell.innerText = (i+10-12) + " pm";
+		tableHeader.appendChild(tableHeaderCell);	
+	}
+}
+
+tableHeaderCell = document.createElement("th");
+tableHeaderCell.innerText = "Total";
+tableHeader.appendChild(tableHeaderCell);
+
+table.appendChild(tableHeader);
+
 
 for (var index = 0; index < stores.length; index++) {
   var currentStore = stores[index];
@@ -55,24 +98,3 @@ for (var index = 0; index < stores.length; index++) {
   currentStore.addInfo();
 }
 
-/*
-portland.cookieRandomHourlySales();
-portland.addInfo();
-
-
-pdxAirport.cookieRandomHourlySales();
-pdxAirport.addInfo();
-
-
-washingtonSq.cookieRandomHourlySales();
-washingtonSq.addInfo();
-
-
-sellwood.cookieRandomHourlySales();
-sellwood.addInfo();
-
-
-pearlDist.cookieRandomHourlySales();
-pearlDist.addInfo();
-
-*/
