@@ -44,7 +44,7 @@ function location(name, min, max, ave){
 var stores = [
 	new location("Portland", 17, 88, 5.2),
 	new location("Portland Airport", 6, 24, 1.2),
-	new location("Washington Sqare", 11, 38, 1.9),
+	new location("Washington Sq.", 11, 38, 1.9),
 	new location("Sellwood", 20, 48, 3.3),
 	new location("Pearl Distict", 3, 24, 2.6)
 ];
@@ -53,7 +53,7 @@ var stores = [
 var table = document.getElementById("locations");
 var tableHeader = document.createElement("tr");
 var tableHeaderCell = document.createElement("th");
-tableHeaderCell.setAttribute("colspan", "5");
+tableHeaderCell.setAttribute("colspan", "9");
 tableHeaderCell.innerText = "Salmon Cookie Sales";
 tableHeader.appendChild(tableHeaderCell);
 table.appendChild(tableHeader);
