@@ -2,9 +2,13 @@ header h3 {
 	display: inline-block;
 	font-size: 32px;
 	vertical-align: middle;
+	font-family: "Martel", serif;
+	font-weight: bold;
+	
 }
 header img {
 	vertical-align: middle;
 	height: 100px;
 	width: 200px;
 }
+section
