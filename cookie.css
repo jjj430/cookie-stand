@@ -1,15 +1,25 @@
-header h1 {
+/* header h1 {
 	display: inline-block;
 	font-size: 48px;
 	vertical-align: middle;
-	color: #ff8b31;
+	color: #ff8362;
 	text-align: center;
 }
 header h2 {
-	color: #ff8b31;
+	color: #ff8362;
 }
-main{
-	background-color: #00a4ba;
-	color: #ff8b31;
+*/
+body{
+	background-color: #3c4663;
+	color: #ff8362;
 	text-align: center;
+	font-family: courier, monospace;
+}
+
+ul {
+	list-style-type:none
+}
+
+body h3{
+	font-family:Avenir, serif;
 }

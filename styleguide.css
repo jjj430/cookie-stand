@@ -1,14 +1,55 @@
-header h3 {
+#headerOne {
+	display: inline-block;
+	font-size: 36px;
+	vertical-align: middle;
+	font-family: Avenir, serif;
+	color:#ff8362;
+	
+}
+
+#headerTwo {
 	display: inline-block;
 	font-size: 32px;
 	vertical-align: middle;
-	font-family: "Martel", serif;
-	font-weight: bold;
+	font-family: Avenir, serif;
+	color:#ff8362;
+	margin-top: 4px;
+	margin-bottom: 4px;
 	
 }
+
+#headerThree {
+	display: inline-block;
+	font-size: 28px;
+	vertical-align: middle;
+	font-family: Avenir, serif;
+	color:#ff8362;
+	
+}	
+		
 header img {
 	vertical-align: middle;
 	height: 100px;
 	width: 200px;
 }
-section
+
+#squares div {
+    display: inline-block;
+    width: 300px;
+    height: 150px;
+}
+
+#square1 {
+	background: #ff8362;
+	text-align:center;
+}
+
+#square2 {
+	background: #3c4663;
+	text-align:center;
+}
+
+#square3 {
+	background: #deada1;
+	text-align:center;
+}
