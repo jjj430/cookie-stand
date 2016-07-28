@@ -12,10 +12,10 @@ function location(name, min, max, ave){
 				+ this.min;
 			this.hourlyCookiesSales[i] = Math.floor(randomNumberRange * this.ave);
 			this.total += this.hourlyCookiesSales[i];
-			console.log(this.hourlyCookiesSales[i]);
+			//console.log(this.hourlyCookiesSales[i]);
 			
 		}
-		console.log("total " + this.total);
+		// console.log("total " + this.total);
 		
 	};
 	
@@ -88,7 +88,6 @@ for (i=0; i < 8; i++){
 tableHeaderCell = document.createElement("th");
 tableHeaderCell.innerText = "Total";
 tableHeader.appendChild(tableHeaderCell);
-
 table.appendChild(tableHeader);
 
 
@@ -98,3 +97,24 @@ for (var index = 0; index < stores.length; index++) {
   currentStore.addInfo();
 }
 
+function pullInfo(formToUse) {
+	var locationName = formToUse.local.value;
+	var minCust = formToUse.min.value;
+	var maxCust = formToUse.max.value;
+	var aveCust = formToUse.ave.value;
+	console.log(locationName);
+	console.log(minCust);
+	console.log(maxCust);
+	console.log(aveCust);
+	new location("locationName", minCust, maxCust, aveCust);
+}
+
+
+/*
+function pullInfo(formToUse) {
+        var info = "Name: "+formToUse.first.value + " " + formToUse.last.value;
+        info += "<br>E-Mail: "+formToUse.email.value;
+        info += "<br>Phone: "+formToUse.phone.value;
+        document.getElementById("form-info").innerHTML = info;
+      }
+*/	  
