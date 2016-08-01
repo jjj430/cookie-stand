@@ -2,6 +2,11 @@ body {
 	font-family: Optima, sans-serif;
 }
 
+label {
+	display: inline-block; 
+	width: 120px;
+	}
+
 #locations {
 	width: 700px;
 	margin: 0 auto;

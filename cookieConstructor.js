@@ -97,20 +97,45 @@ for (var index = 0; index < stores.length; index++) {
   currentStore.addInfo();
 }
 
+   
+
 function pullInfo(formToUse) {
-	var locationName = formToUse.local.value;
-	var minCust = formToUse.min.value;
-	var maxCust = formToUse.max.value;
-	var aveCust = formToUse.ave.value;
+	 locationName = formToUse.local.value;
+	 minCust = formToUse.min.value;
+	 maxCust = formToUse.max.value;
+	 aveCust = formToUse.ave.value;
+	
 	console.log(locationName);
-	console.log(minCust);
-	console.log(maxCust);
-	console.log(aveCust);
-	new location("locationName", minCust, maxCust, aveCust);
+	//console.log(minCust);
+	//console.log(maxCust);
+	//console.log(aveCust);
+	
+	var newStore = new location(locationName, minCust, maxCust, aveCust);
+	
+	var locationRow = document.createElement("tr");
+	var nameCell = document.createElement("td");
+	nameCell.innerText = locationName;
+	locationRow.appendChild(nameCell);
+	
+	
+	//var currentStore = stores[index];
+	newStore.cookieRandomHourlySales();
+	newStore.addInfo();
 }
 
 
+
 /*
+var locationRow = document.createElement("tr");
+			var nameCell = document.createElement("td");
+			nameCell.innerText = this.name;
+			locationRow.appendChild(nameCell);
+			
+			for (var i=0; i < 8; i++){
+				var cookieCell = document.createElement("td");
+				cookieCell.innerText = this.hourlyCookiesSales[i];
+				locationRow.appendChild(cookieCell);
+
 function pullInfo(formToUse) {
         var info = "Name: "+formToUse.first.value + " " + formToUse.last.value;
         info += "<br>E-Mail: "+formToUse.email.value;
